@@ -1,0 +1,139 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                             %
+% Vaughn Kottler                                                              %
+%     Undergraduate CE & CS Student | University of Wisconsin-Madison         %
+%                                                                             %
+% Last Updated: 10/29/2017                                                    %
+%                                                                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Globals & Packages
+\documentclass[UTF8,letterpaper,10pt,AutoFakeBold]{article}
+
+\usepackage[utf8]{inputenc}			% Boilerplate
+\usepackage[hidelinks]{hyperref}	% Hyperlinks
+\usepackage{graphicx}				% Images
+\usepackage{color}					% Colors
+\usepackage{changepage}				% Vertical align blocks
+\usepackage[document]{ragged2e}		% Left-align text
+\usepackage{setspace}				% Custom line-spacing
+\usepackage{fancyhdr}				% Header & Footer
+\usepackage{subfiles}				% Multi-file projects
+%\usepackage[default]{sourcecodepro}	% Font
+%\usepackage[T1]{fontenc}
+\addtolength{\topmargin}{-1.0in}	% Margins
+\addtolength{\oddsidemargin}{-1.5in}
+\addtolength{\evensidemargin}{-1.5in}
+\addtolength{\textwidth}{3.0in}
+\addtolength{\textheight}{2.25in}
+
+\usepackage[absolute,overlay]{textpos}	% positioning blocks
+\setlength{\TPHorizModule}{1in} 		% horizontal unit
+\setlength{\TPVertModule}{1in} 			% vertical unit
+
+\usepackage{fontspec}
+\setmainfont[Mapping=tex-text]{Source Code Pro}
+\setsansfont[Mapping=tex-text]{Source Code Pro}
+\setmonofont{Source Code Pro}
+
+\usepackage[CJKchecksingle,CJKnumber]{xeCJK}
+\setCJKmainfont[BoldFont={Microsoft YaHei}, ItalicFont={KaiTi}]{Microsoft YaHei}
+%\setCJKsansfont{Adobe Heiti Std}
+%\setCJKmonofont{Adobe Fangsong Std}
+\punctstyle{hangmobanjiao}
+
+% Metadata
+\title{resume}
+\author{Vaughn Kottler}
+
+% Custom colors
+\definecolor{maroon}{RGB}{152, 0, 0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               Custom commands                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Horizontal rule
+\newcommand{\HR}{{\centering\noindent\rule{7.75in}{0.5pt}}\linebreak[4]}
+
+% Link styling: blue and underlined
+\newcommand{\LINK}[1]{{\color{blue}\underline{\smash{\url{#1}}}}}
+
+% Link reference styling: blue, underlined with underline close to text
+\newcommand{\HREF}[2]{{\color{blue}\underline{\smash{\href{#1}{#2}}}}}
+
+% Section formatting helpers, removes a lot of boilerplate
+\newcommand{\SECTHEAD}[3][maroon]{{\textbf{\color{#1} #2:}}\ \textit{#3}}
+\newcommand{\ALTHEAD}[3]{\textbf{#1} (#2) \textit{#3}}
+
+\newcommand{\SECTCONTNOBRK}[1]{{\small - #1}}
+\newcommand{\SECTCONT}[1]{\SECTCONTNOBRK{#1}\linebreak[4]}
+\newcommand{\SECTC}[3]{\SECTHEAD{#1}{#2}\linebreak[4]\SECTCONT{#3}}
+\newcommand{\SECTCNOBRK}[3]{\SECTHEAD{#1}{#2}\linebreak[4]\SECTCONTNOBRK{#3}}
+\newcommand{\SECTSTART}[2]{\underline{#1:}\hspace{#2}}
+\newcommand{\SECT}[5]{\SECTSTART{#1}{#2}\SECTHEAD{#3}{#4}#5}
+\newcommand{\ALTSECT}[6]{\SECTSTART{#1}{#2}\ALTHEAD{#3}{#4}{#5}#6}
+
+% Work-section specific
+\newcommand{\WORK}[4]{\SECTHEAD{#1}{#2}{#3}\linebreak[4]\SECTCONT{#4}}
+\newcommand{\WORKNOBRK}[4]{\ALTHEAD{#1}{#2}{#3}\linebreak[4]\SECTCONTNOBRK{#4}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                               Header and Footer                             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagestyle{fancy}
+\fancyhf{}
+
+% Top header
+\chead{\footnotesize
+    \textbf{Phone:}\ 13269972287 $\vert$
+    \textbf{Email:}\ \LINK{2247058872@qq.com} $\vert$
+    \textbf{Website:}\ \LINK{weibo.com/u/3564595540} $\vert$
+    \textbf{GitHub:}\ \LINK{www.github.com/zhangfeiyue80}
+}
+
+% Get rid of header horizontal rule
+\renewcommand{\headrulewidth}{0pt}
+
+% Reduce distance between header and text
+\setlength{\headsep}{0.15in}
+\setlength{\footskip}{0.4in}
+\setlength{\parskip}{-1.00em} 
+
+% Bottom header(s)
+\rfoot{\footnotesize
+    Made with {\color{maroon}\LaTeX{}} (\textit{\today})
+}
+\lfoot{\footnotesize
+    \textbf{BiliBili tutorials:}\ \LINK{https://space.bilibili.com/43477776}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                              Document Content                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}%
+\subfile{sections/name}\noindent
+\subfile{sections/education}\noindent
+\subfile{sections/work}\noindent
+\HR
+\subfile{sections/skills_cs}\noindent
+%\subfile{sections/skills_ce}\noindent
+%\subfile{sections/leadership}\noindent
+\HR
+%
+%\begin{textblock}{1.25}(6.5,9.2)
+%\includegraphics[width=1.25pt]{im/logo_500.png}
+%\includegraphics[scale=0.4]{im/logo_500.png}
+%\end{textblock}
+%\subfile{sections/involvement}\noindent
+%\subfile{sections/awards}
+\subfile{sections/experience.tex}
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
