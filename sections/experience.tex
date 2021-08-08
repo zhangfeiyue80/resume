@@ -9,7 +9,12 @@
 	%
 	\SECTCONT{客户信息平台系统底层数据库从 oracle 转为 postgres, 负责 memcache 逻辑操作日志文件到 postgres 的持久化存储的同步服务编写, 在原有架构上的底层迁移; 实现 postgres 集群节点的数据分布式存储访问}
 	\SECTCONT{客户信息平台系统配合信审系统查询客户风险指标信息，在日终批量架构上，新增了一支 xml 文件导入任务，在基于 tuxedo 的交易架构上新增了一支数据查询交易}
-	\SECTCONT{中国邮政储蓄银行网络安全重点保障-客户信息平台系统网络保障支持，编写了监控脚本, 在应用节点上布署, 主要监控业务系统日志，linux 系统异常登录 ip，系统异常端口, 系统异常进程，并实时展示}
+	%
+	\SECTC{天融信网络安全}
+		{wireshark 报文分析}
+		{ssh,tftp,radius,smb,nfs 协议维护}
+	\SECTCONT{网审文件还原程序clean\_file 添加文件还原大小统计功能}
+
 	%
 	\SECTC{北京南天软件有限公司}
 		{运维开发邮储业务系统 (新网点核算，储蓄网点报表, 亦庄储蓄逻辑集中历史)}
@@ -17,8 +22,7 @@
 	%
 	\SECTC{Python/C/C++}
 		{github小功能}
-		{链表, n叉数, 堆内存空间动态分配\HREF{https://github.com/zhangfeiyue80/BaseTraning}{BaseTraining}}
-	\SECTCONT{librosa库音频去底噪, matplotlib库画时序图，频谱图\HREF{https://github.com/zhangfeiyue80/PyFilterWav}{PyFilterWav}}
+		{链表, n叉数 \HREF{https://github.com/zhangfeiyue80/BaseTraning}{BaseTraining}; librosa库音频去底噪, matplotlib库画时序图，频谱图\HREF{https://github.com/zhangfeiyue80/PyFilterWav}{PyFilterWav}}
 	%
 \end{flushleft}
 \end{adjustwidth}}

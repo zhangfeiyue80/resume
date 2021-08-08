@@ -8,7 +8,8 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Globals & Packages
-\documentclass[UTF8,letterpaper,10pt,AutoFakeBold]{article}
+%\documentclass[UTF8,letterpaper,10pt,AutoFakeBold]{article}
+\documentclass[letterpaper,10pt,AutoFakeBold]{article}
 
 \usepackage[utf8]{inputenc}			% Boilerplate
 \usepackage[hidelinks]{hyperref}	% Hyperlinks
@@ -32,14 +33,17 @@
 \setlength{\TPVertModule}{1in} 			% vertical unit
 
 \usepackage{fontspec}
-\setmainfont[Mapping=tex-text]{Source Code Pro}
-\setsansfont[Mapping=tex-text]{Source Code Pro}
-\setmonofont{Source Code Pro}
+\setmainfont[Mapping=tex-text]{Source Code Pro Semibold}
+\setsansfont[Mapping=tex-text]{Source Code Pro Semibold}
+\setmonofont{Source Code Pro Semibold}
 
-\usepackage[CJKchecksingle,CJKnumber]{xeCJK}
+%\usepackage[CJKchecksingle,CJKnumber]{xeCJK}
+\usepackage[CJKchecksingle]{xeCJK}
+%\usepackage{CJKnumb}
 \setCJKmainfont[BoldFont={Microsoft YaHei}, ItalicFont={KaiTi}]{Microsoft YaHei}
 %\setCJKsansfont{Adobe Heiti Std}
 %\setCJKmonofont{Adobe Fangsong Std}
+\setCJKmonofont{Microsoft YaHei}
 \punctstyle{hangmobanjiao}
 
 % Metadata
